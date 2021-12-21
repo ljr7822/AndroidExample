@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:scrollbars="none">
+
+        <cn.iwenddg.tablayouts.SegmentTabLayout
+            android:id="@+id/segmentTabLayout"
+            android:layout_width="280dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            tl:layout_constraintEnd_toEndOf="parent"
+            tl:layout_constraintStart_toStartOf="parent"
+            tl:layout_constraintTop_toTopOf="parent"
+            tl:tl_bar_color="#ffffff"
+            tl:tl_indicator_anim_enable="true"
+            tl:tl_indicator_color="#9664EB"
+            tl:tl_indicator_margin_bottom="2dp"
+            tl:tl_indicator_margin_left="2dp"
+            tl:tl_indicator_margin_right="2dp"
+            tl:tl_indicator_margin_top="2dp"
+            tl:tl_textBold="SELECT" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tl:layout_constraintBottom_toBottomOf="parent"
+            tl:layout_constraintEnd_toEndOf="parent"
+            tl:layout_constraintStart_toStartOf="parent"
+            tl:layout_constraintTop_toBottomOf="@+id/segmentTabLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

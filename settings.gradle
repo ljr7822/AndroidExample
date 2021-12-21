@@ -1,0 +1,3 @@
+rootProject.name = "AndroidExample"
+include ':app'
+include ':tablayouts'

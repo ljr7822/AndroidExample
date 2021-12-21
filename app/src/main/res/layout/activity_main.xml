@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--此处添加和绑定viewModel:我们这里直接和刚创建的MainVM绑定起来-->
+        <variable
+            name="viewModel"
+            type="cn.iwenddg.androidexample.work.vm.MainVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity">
+
+
+        <Button
+            android:id="@+id/btn_skip_nav_lottie"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{viewModel::onToNavLottieClick}"
+            android:text="lottie动画实现底部导航"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_skip_nav_vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="@{viewModel::onToNavViewPagerClick}"
+            android:text="ViewPager实现底部导航"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_skip_nav_lottie" />
+
+        <Button
+            android:id="@+id/btn_skip_nav_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="@{viewModel::onToNavTabLayouClick}"
+            android:text="Tablayout例子"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_skip_nav_vp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
